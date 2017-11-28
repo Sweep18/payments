@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jQuery !-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- jQuery UI !-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<form id="pay" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Перевести</button>
+</form>
+
+<br>
+<span id="message"></span>
+
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
